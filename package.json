@@ -1,0 +1,104 @@
+{
+  "name": "local-dream",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "记忆",
+      "en": "Memory"
+    },
+    "icon": "book",
+    "contributes": {
+      "composer.actions": [
+        {
+          "id": "dream-now",
+          "label": {
+            "zh": "立即做梦",
+            "en": "Dream now"
+          },
+          "icon": "sparkle"
+        }
+      ],
+      "composer.strip": [
+        {
+          "id": "memory-state",
+          "icon": "book",
+          "panel": "memory"
+        }
+      ],
+      "panels": [
+        {
+          "id": "memory",
+          "title": {
+            "zh": "记忆",
+            "en": "Memory"
+          },
+          "icon": "book",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        },
+        {
+          "id": "memory-detail",
+          "title": {
+            "zh": "记忆详情",
+            "en": "Memory detail"
+          },
+          "icon": "document",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        },
+        {
+          "id": "memory-edit",
+          "title": {
+            "zh": "编辑记忆",
+            "en": "Edit memory"
+          },
+          "icon": "edit",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        }
+      ]
+    }
+  },
+  "description": "Long-term memory + background consolidation (\"dreaming\") for DSH Go: injects memory into the system prompt, adds six memory tools, and organizes conversations in the background.",
+  "license": "AGPL-3.0-only",
+  "author": "bug40444",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bug40444/local-dream.git"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh-bundle",
+    "memory",
+    "dsh-go"
+  ],
+  "exports": {
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib/**/*.mjs",
+    "lib/index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://github.com/bug40444/local-dream"
+}

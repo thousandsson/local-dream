@@ -1,0 +1,4 @@
+.key
+*.tgz
+node_modules/
+memory/.dream.lock
