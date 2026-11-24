@@ -1,6 +1,6 @@
 {
   "name": "local-dream",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "main": "lib/index.js",
   "dsh": {
@@ -23,8 +23,8 @@
         {
           "id": "dream-now",
           "label": {
-            "zh": "立即做梦",
-            "en": "Dream now"
+            "zh": "立即整理",
+            "en": "Organize now"
           },
           "icon": "sparkle"
         }
